@@ -5,9 +5,17 @@ public class BookBean {
 	private String author;
 	private String publisher;
 
+	public BookBean(String title, String author, String publisher) {
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+	}
 	public BookBean() {
 
 	}
+	
+
+
 
 	public String getTitle() {
 		return title;

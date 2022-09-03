@@ -1,14 +1,35 @@
 package org.ai.beans;
 
-//import java.util.Date;
-
 public class Members {
 	private String userId;
 	private String userPw;
-	private String name;
+	private String userName;
+	private String phoneNo;
 	private String address;
-	private java.util.Date regDate;
 	private String email;
+	private String regDate;
+
+	public Members(String userId, String userPw, String userName, String phoneNo, String address, String email) {
+		this.userId = userId;
+		this.userPw = userPw;
+		this.userName = userName;
+		this.phoneNo = phoneNo;
+		this.address = address;
+		this.email = email;
+
+	}
+
+	public Members(String userId, String userPw, String userName, String phoneNo, String address, String email,
+			String regDate) {
+		this.userId = userId;
+		this.userPw = userPw;
+		this.userName = userName;
+		this.phoneNo = phoneNo;
+		this.address = address;
+		this.email = email;
+		this.regDate = regDate;
+
+	}
 
 	public String getUserId() {
 		return userId;
@@ -16,6 +37,14 @@ public class Members {
 
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
 	public String getUserPw() {
@@ -26,12 +55,12 @@ public class Members {
 		this.userPw = userPw;
 	}
 
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String name) {
+		this.userName = name;
 	}
 
 	public String getAddress() {
@@ -42,11 +71,11 @@ public class Members {
 		this.address = address;
 	}
 
-	public java.util.Date getRegDate() {
+	public String getRegDate() {
 		return regDate;
 	}
 
-	public void setRegDate(java.util.Date regDate) {
+	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
 
@@ -60,5 +89,5 @@ public class Members {
 
 	Members() {
 	}
-	
+
 }
