@@ -12,7 +12,7 @@
 <jsp:useBean id="book" class ="org.ai.beans.BookBean"/><!-- book객체는 속성이 null -->
 <jsp:setProperty property="*" name="book"/>/* book객체는 입력받은 값을 BookBean클래스 속성에 저장 */
 <%
-request.setAttribute("book",book); /* HttpServletRequest 로 "book"객체 만들어 저장 */
+request.setAttribute("book",book); /* HttpServletRequest 로 book이라는 key 로 value를 참조한다*/
 %>
 <jsp:forward page="bookOutput.jsp"/>
 </body>
