@@ -39,7 +39,7 @@
 	}
 	%>
 	<c:set var="members" value="${members}" />
-	<form action="updateProc.jsp" method="post">
+	<form action="#" method="post">
 		<table border="1">
 			<c:forEach var="item" items="${members }">
 				<tr>

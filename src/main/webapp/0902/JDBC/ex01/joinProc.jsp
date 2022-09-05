@@ -54,7 +54,9 @@
 	} catch (Exception e) {
 		e.printStackTrace();
 	} finally {
-		conn.close();
+		rs.close();
+	
+		
 	}
 	%>
 	<c:set var="members" value="${members}" />

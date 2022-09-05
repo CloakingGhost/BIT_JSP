@@ -38,14 +38,14 @@
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
-	}finally{
+	} finally {
 		conn.close();
 	}
 	%>
 	<c:set var="bList" value="<%=bList%>" />
+	<form action="">
 	<table border="1">
 		<tr>
-			<th>BOOKID</th>
 			<th>BOOK NAME</th>
 			<th>PUBLISHER</th>
 			<th>PRICE</th>
@@ -53,15 +53,15 @@
 
 		<c:forEach var="item" items="${bList }">
 			<tr>
-				<td style="text-align: center">${item.bookId}</td>
-				<td>${item.bookName}</td>
+				<td><a href="bookview.jsp?bookId=${item.bookId}">${item.bookName}</a></td>
 				<td>${item.publisher}</td>
 				<td style="width: 100px">${item.price}원</td>
 			</tr>
 		</c:forEach>
 	</table>
-	
-	
+	</form>
+
+
 
 	<%-- <table border="1">
 		<tr>
@@ -85,7 +85,7 @@
 		%>
 	</table>
 	 --%>
-	
+
 
 </body>
 </html>

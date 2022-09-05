@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
-  <display-name>firstJSP</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  
-  
-  <context-param>
-  <param-name>adminId</param-name>
-  <param-value>admin</param-value>
-  </context-param>
-  <context-param>
-  <param-name>adminPw</param-name>
-  <param-value>1234</param-value>
-  </context-param>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	<display-name>firstJSP</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 220905에 만듬 서블릿 -->
+	<servlet> <!-- HttpServblet을 상속받고 있는 클래스를 등록할 때 사용 -->
+		<servlet-name>first</servlet-name><!-- 등록하는 서블릿의 이름 부여 --><!-- 이름으로 연결 -->
+		<servlet-class>org.ai.controllers.FirstServlet</servlet-class><!-- 여기로 
+			오면 어떤일이 일어나는지 연결 -->
+		<!-- 위에것으로 하면 자료가 어디있는지 다 나오니까 아래와 같이 다른 명칭으로 만들어 자료위치를 감춤 -->
+	</servlet>
+	<!-- url의 패턴을 짝지을 것이다 name으로 -->
+	<!--<servlet-mapping> <servlet>태그에서 등록한 서블릿을 실행 요청할때 사용할 url지정 <servlet-name>first</servlet-name>이름으로 
+		연결 <url-pattern>/hello</url-pattern>여기로 오면 어떤일이 일어나는지 연결 </servlet-mapping> -->
+
+
+<!-- 여기에 특정값을 작성해놓으면 다른 파일에서도 사용할수 있다 "getServletContext()."getInitParameter("userId") -->
+	<context-param>
+		<param-name>userId</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+	<context-param>
+		<param-name>userPw</param-name>
+		<param-value>4567</param-value>
+	</context-param>
+	<context-param>
+		<param-name>adminId</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+	<context-param>
+		<param-name>adminPw</param-name>
+		<param-value>1234</param-value>
+	</context-param>
 </web-app>

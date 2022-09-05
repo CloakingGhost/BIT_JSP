@@ -9,6 +9,9 @@ public class Members {
 	private String email;
 	private String regDate;
 
+	public Members() {
+	}
+
 	public Members(String userId, String userPw, String userName, String phoneNo, String address, String email) {
 		this.userId = userId;
 		this.userPw = userPw;
@@ -87,7 +90,6 @@ public class Members {
 		this.email = email;
 	}
 
-	Members() {
-	}
+	
 
 }
