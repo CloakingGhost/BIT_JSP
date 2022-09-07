@@ -25,7 +25,7 @@
 
 
 <!-- 여기에 특정값을 작성해놓으면 다른 파일에서도 사용할수 있다 "getServletContext()."getInitParameter("userId") -->
-	<context-param>
+	<!-- <context-param>
 		<param-name>userId</param-name>
 		<param-value>admin</param-value>
 	</context-param>
@@ -40,5 +40,5 @@
 	<context-param>
 		<param-name>adminPw</param-name>
 		<param-value>1234</param-value>
-	</context-param>
+	</context-param> -->
 </web-app>

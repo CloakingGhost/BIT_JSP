@@ -39,6 +39,8 @@
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	} finally {
+		rs.close();
+		pstmt.close();
 		conn.close();
 	}
 	%>
@@ -53,7 +55,9 @@
 
 		<c:forEach var="item" items="${bList }">
 			<tr>
-				<td><a href="bookview.jsp?bookId=${item.bookId}">${item.bookName}</a></td>
+				<%-- <td><a href="https://namu.wiki/w/${item.bookId}">${item.bookName}</a></td> --%>
+				<td><a href="https://www.youtube.com/results?search_query=${item.bookId}">${item.bookName}</a></td>
+				<%-- <td><a href="bookview.jsp?bookId=${item.bookId}">${item.bookName}</a></td> --%>
 				<td>${item.publisher}</td>
 				<td style="width: 100px">${item.price}원</td>
 			</tr>

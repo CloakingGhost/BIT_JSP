@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="loginProc.do" method="POST">
-	아이디 : <input type="text"name="userId" ><br>
-	비밀번호 : <input type="text"name="userPw" >
-	<input type="submit" value="전송">
-</form>
+hello
 </body>
 </html>
