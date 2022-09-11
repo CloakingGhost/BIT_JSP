@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%
-	request.setCharacterEncoding("utd-8");
+	request.setCharacterEncoding("utf-8");
 
 	String userPw = request.getParameter("userPw");
 	String userName = request.getParameter("userName");
@@ -29,7 +29,7 @@
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	conn = DriverManager.getConnection(url, dbid, dbpw);
 
-	sql = "update Members set userPw = ?,userName = ?,phoneNo=?,address=?,email=? where like " + "aaa" + '\"';
+	sql = "update Members set userPw = ?,userName = ?,phoneNo=?,address=?,email=? where userId ='aaa'";
 	pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, userPw);
 	pstmt.setString(2, userName);
@@ -45,6 +45,7 @@
 		members.add(new Members(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 		rs.getString(6)));
 	}
+	request.setAttribute("members", members);
 	%>
 	<c:set var="members" value="${members }" />
 	<form action="updateProc.jsp" method="post">
